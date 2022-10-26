@@ -1,10 +1,24 @@
-on:
-  push:
-    branches:
-      - main
+name : My Linter Action
+
+on :
+  
+  push :
+    branches : [ main ]
+
+  workflow_dispatch:
 
 jobs:
-  print_hello:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World!"
+  
+  build:
+    
+    runs-on: ubuntu-dernière
+
+    steps :
+      
+      - uses : actions/checkout@v2
+
+      - name: Exécuter un script
+        run: echo Hello, World !
+
+      - name : Exécuter le service de linting
+        uses : github/super-linter@v3Test de tout le code
