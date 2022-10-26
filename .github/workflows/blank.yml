@@ -15,10 +15,10 @@ jobs:
 
     steps :
       
-      - uses : actions/checkout@v2
+      - uses : actions/checkout@v3
 
       - name: Exécuter un script
         run: echo Hello, World !
 
       - name : Exécuter le service de linting
-        uses : github/super-linter@v3Test de tout le code
+        uses : github/super-linter@v4
